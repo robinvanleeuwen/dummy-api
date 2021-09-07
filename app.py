@@ -12,7 +12,7 @@ USER_TOKEN = "09KfFta3MmtBFiTz55lzqG8WcOR_IZPb8s1F4LHpZ0b1iuw"
 
 
 @api.method("validate_ticket")
-def validate_ticket(email: str, token: str, qr_data: dict) -> Dict:
+def validate_ticket(email: str, token: str, qr_data: dict) -> dict:
 
     valid_ticket_tokens = [
         "pu_ztHGAw-1sBNcXWJzKV7m3Gg6LPd4_94a8RBhXDpakSfk",
@@ -27,7 +27,7 @@ def validate_ticket(email: str, token: str, qr_data: dict) -> Dict:
             "message": f"user {email} is not authorized to validate tickets"
         }
 
-    token = qr_data.get("token")
+    token = qr_data.get("token", None)
 
     if token is None or token not in valid_ticket_tokens:
         return {
