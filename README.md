@@ -5,7 +5,7 @@ A dummy API to validate QR codes.
 
 clone this repo:
 
-  ```git clone  git clone git@github.com:robinvanleeuwen/dummy-api.git```
+  ```git clone git@github.com:robinvanleeuwen/dummy-api.git```
   
 Create virtual environment and install dependencies:
   ```
