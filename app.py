@@ -1,3 +1,5 @@
+from typing import Dict
+
 from flask import Flask
 from flask_jsonrpc import JSONRPC
 
@@ -10,7 +12,7 @@ USER_TOKEN = "09KfFta3MmtBFiTz55lzqG8WcOR_IZPb8s1F4LHpZ0b1iuw"
 
 
 @api.method("validate_ticket")
-def validate_ticket(email: str, token: str, qr_data: dict):
+def validate_ticket(email: str, token: str, qr_data: dict) -> Dict:
 
     valid_ticket_tokens = [
         "pu_ztHGAw-1sBNcXWJzKV7m3Gg6LPd4_94a8RBhXDpakSfk",
